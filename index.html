@@ -31,13 +31,32 @@
                 id="cc_strinfo_tracktitle_academytop" class="cc_streaminfo"></span> - <span
                 id="cc_strinfo_trackalbum_academytop" class="cc_streaminfo"></span><br/>
                 Raw metadata: <span id="cc_strinfo_rawmeta_academytop" class="cc_streaminfo"></span>
-            
+               
+
+               <button onclick="playAudio()">Воспроизвести</button>
+               <button onclick="pauseAudio()">Пауза</button>
+
+
             </div>
         </div>
-        <audio autoplay controls>
+        <audio id="audio-player" autoplay controls>
             <source src="http://misato.ru-hoster.com:8078/stream" type="audio/mp3">
         </audio>
     </main>
+    <script>
+// Получение ссылки на аудио элемент
+var audioPlayer = document.getElementById("audio-player");
+
+// Функция для воспроизведения аудио
+function playAudio() {
+  audioPlayer.play();
+}
+
+// Функция для остановки воспроизведения аудио
+function pauseAudio() {
+  audioPlayer.pause();
+}
+</script>
     <script language="javascript" type="text/javascript" src="https://aska.ru-hoster.com:2199/system/streaminfo.js"></script>
 </body>
 
